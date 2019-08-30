@@ -1,0 +1,32 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+
+      <ion-tab-button tab="desafios" (click)="changeDesafiosIcon()"> 
+          <ion-icon [style.color]="isDesafiosSelected ? 'medium' : 'primary'" [src]="isDesafiosSelected ? clickedDesafiosIcon : desafiosIcon"></ion-icon>
+          <ion-label [style.color]="isDesafiosSelected ? 'medium' : 'primary'">Desafiar</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="equipos" (click)="changeEquiposIcon()"> 
+          <ion-icon [style.color]="isEquiposSelected ? 'primary' : 'medium'" [src]="isEquiposSelected ? clickedEquiposIcon : equiposIcon"></ion-icon>
+          <ion-label [style.color]="isEquiposSelected ? 'primary' : 'medium'">Equipos</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="canchas" (click)="changeCanchasIcon()"> 
+          <ion-icon [style.color]="isCanchasSelected ? 'primary' : 'medium'" [src]="isCanchasSelected ? clickedCanchasIcon : canchasIcon"></ion-icon>
+          <ion-label [style.color]="isCanchasSelected ? 'primary' : 'medium'">Canchas</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="notificaciones" (click)="changeNotificacionesIcon()"> 
+            <ion-icon [style.color]="isNotificacionesSelected ? 'primary' : 'medium'" [src]="isNotificacionesSelected ? clickedNotificacionesIcon : notificacionesIcon"></ion-icon>
+            <ion-label [style.color]="isNotificacionesSelected ? 'primary' : 'medium'">Notificaciones</ion-label>
+        </ion-tab-button>
+
+      <ion-tab-button tab="perfil" (click)="changePerfilIcon()">
+            <ion-icon [style.color]="isPerfilSelected ? 'primary' : 'medium'" [src]="isPerfilSelected ? clickedPerfilIcon : perfilIcon"></ion-icon>
+            <ion-label [style.color]="isPerfilSelected ? 'primary' : 'medium'">Perfil</ion-label>
+        </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Nombre App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="none">
+
+    <ion-list-header>
+      Notificaciones
+    </ion-list-header>
+
+    <ion-item *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1,1];">
+  
+      <ion-avatar slot="start">
+        <img src="assets/manchester.png">
+      </ion-avatar>
+
+      <ion-label>
+        <h4><strong>Manchester</strong> está desafiando a</h4>
+        <p style="color: black;"> tu equipo <strong>Barcelona</strong></p>
+         
+      </ion-label>
+
+      <ion-button style="margin-right: 0px;" color="primary" slot="end" size="small">Aceptar</ion-button>
+      <ion-button style="margin-left: 0px; margin-right: 2px;" color="danger" slot="end" size="small">Rechazar</ion-button>
+
+
+    </ion-item>
+    
+  </ion-list>
+  
+</ion-content>
