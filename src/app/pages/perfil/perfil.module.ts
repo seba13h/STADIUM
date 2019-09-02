@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { PerfilPage } from './perfil.page';
+import { ModalCrearEquipoPage } from '../modal-crear-equipo/modal-crear-equipo.page';
+import { ModalCrearEquipoPageModule } from '../modal-crear-equipo/modal-crear-equipo.module';
 
 const routes: Routes = [
   {
@@ -15,11 +17,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  entryComponents: [
+    ModalCrearEquipoPage
+  ],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ModalCrearEquipoPageModule
   ],
   declarations: [PerfilPage]
 })

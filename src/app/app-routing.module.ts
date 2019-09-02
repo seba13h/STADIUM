@@ -4,7 +4,6 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
-  { path: 'equipos', loadChildren: './pages/equipos/equipos.module#EquiposPageModule' },
   { path: 'desafios', loadChildren: './pages/desafios/desafios.module#DesafiosPageModule' },
   { path: 'canchas', loadChildren: './pages/canchas/canchas.module#CanchasPageModule' },
   { path: 'notificaciones', loadChildren: './pages/notificaciones/notificaciones.module#NotificacionesPageModule' },

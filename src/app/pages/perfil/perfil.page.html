@@ -5,7 +5,7 @@
         <ion-back-button text="Atrás"></ion-back-button>
       </ion-buttons>
   
-      <ion-title>Nombre App</ion-title>
+      <ion-title>Stadium</ion-title>
     </ion-toolbar>
   </ion-header>
   
@@ -31,15 +31,15 @@
         
         <ion-col>
           <ion-item>
-            <ion-icon color="primary" slot="start" src="/assets/icon/ball.svg"></ion-icon>
-            <ion-label>Goles</ion-label>
-            <ion-note slot="end" color="primary">15</ion-note>
+            <ion-icon color="primary" slot="start" src="/assets/icon/posicion.svg"></ion-icon>
+            <ion-label>Posición</ion-label>
+            <ion-note slot="end" color="primary">Defensa</ion-note>
           </ion-item>
 
           <ion-item>
-            <ion-icon color="primary" slot="start" src="/assets/icon/trofeo-full.svg"></ion-icon>
-            <ion-label>Victorias</ion-label>
-            <ion-note slot="end" color="primary">5</ion-note>
+            <ion-icon color="primary" slot="start" src="/assets/icon/pie.svg"></ion-icon>
+            <ion-label>Pie Hábil</ion-label>
+            <ion-note slot="end" color="primary">Derecho</ion-note>
           </ion-item>
   
           <ion-item>
@@ -66,6 +66,29 @@
   
       </ion-row>
   
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+  
+          <ion-button expand="block" color="primary"><ion-icon src="../../assets/icon/galleta.svg"></ion-icon>  Galletear</ion-button>
+  
+        </ion-col>
+
+        <ion-col>
+  
+          <ion-button expand="block" color="primary"><ion-icon name="search"></ion-icon> Buscar equipos</ion-button>
+  
+        </ion-col>
+
+        <ion-col size="6">
+  
+          <ion-button expand="block" color="primary" (click)="abrirModal()"><ion-icon name="add-circle"></ion-icon> Crear equipo</ion-button>
+  
+        </ion-col>
+
+      </ion-row>
     </ion-grid>
   
     <ion-grid fixed>

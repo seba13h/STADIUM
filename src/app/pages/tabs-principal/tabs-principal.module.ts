@@ -17,10 +17,6 @@ const routes: Routes = [
         loadChildren: '../desafios/desafios.module#DesafiosPageModule'
       },
       {
-        path: 'equipos',
-        loadChildren: '../equipos/equipos.module#EquiposPageModule'
-      },
-      {
         path: 'canchas',
         loadChildren: '../canchas/canchas.module#CanchasPageModule'
       },

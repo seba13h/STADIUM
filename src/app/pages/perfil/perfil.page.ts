@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { ModalCrearEquipoPage } from '../modal-crear-equipo/modal-crear-equipo.page';
 
 @Component({
   selector: 'app-perfil',
@@ -25,9 +27,19 @@ export class PerfilPage implements OnInit {
     spacebetween: -3,
   };
 
-  constructor() { }
+  constructor( private modalCtrl: ModalController ) { }
 
   ngOnInit() {
+  }
+
+  async abrirModal(){
+
+    const modal = await this.modalCtrl.create({
+      component: ModalCrearEquipoPage
+    });
+
+    await modal.present();
+
   }
 
 }

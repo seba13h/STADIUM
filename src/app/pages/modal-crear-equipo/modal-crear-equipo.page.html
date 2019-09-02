@@ -1,0 +1,162 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Crear Equipo</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Cerrar</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-slides class="mainSlide">
+    
+    <ion-slide>
+
+      <ion-grid fixed>
+
+        <ion-row>
+          <ion-col>
+              <h3>Seleccione Insignia del Equipo</h3>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+              <ion-slides>
+                <ion-slide *ngFor="let avatar of avatars">
+                    <img class="pick-avatar" 
+                            src="../../assets/avatars/{{avatar.img}}">
+                </ion-slide>
+              </ion-slides>
+          </ion-col>
+        </ion-row>
+        
+        <form>
+          <ion-row>
+            <ion-col>
+                
+              <ion-list>
+                  
+                <ion-item>
+                  <ion-label position="floating">Nombre del equipo</ion-label>
+                  <ion-input name="nombre-equipo" 
+                              type="text"
+                              required></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>Región</ion-label>
+                  <ion-select>
+                    <ion-select-option *ngFor="let region of regiones">
+                       {{ region.nombre }}
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>Provincia</ion-label>
+                  <ion-select>
+                    <ion-select-option>
+                        Valparaíso
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>Comuna</ion-label>
+                  <ion-select>
+                    <ion-select-option>
+                        Valparaíso
+                    </ion-select-option>
+                  </ion-select>
+                </ion-item>
+
+              </ion-list>
+
+            </ion-col>
+          </ion-row>
+          
+          <ion-row>
+            <ion-col>
+                <ion-label color="primary">Desliza para integrar a tus jugadores</ion-label>
+            </ion-col>
+          </ion-row>
+          
+          <ion-row>
+            <ion-col>
+                <ion-icon color="primary" style="width: 50px; height: 50px;" src="../../assets/icon/swipe.svg"></ion-icon>
+            </ion-col>
+          </ion-row>
+        
+        </form>
+
+      </ion-grid>
+    
+
+
+    </ion-slide>
+
+    <ion-slide>
+
+      <ion-grid fixed>
+
+        <ion-row>
+          <ion-col>
+              <h3>Arma tu plantel</h3>
+          </ion-col>
+        </ion-row>
+        
+        <form>
+          <ion-row>
+            <ion-col>
+                
+              <ion-list>
+                  
+                <ion-item>
+                  <ion-label>Arquero</ion-label>
+                  <ion-button color="primary" (click)="abrirModalArquerosSel()"><ion-icon name="search"></ion-icon></ion-button>
+                </ion-item> 
+
+                <ion-item>
+                  <ion-label>Defensas</ion-label>
+                  <ion-button color="primary" ><ion-icon name="search"></ion-icon></ion-button>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>Centros</ion-label>
+                  <ion-button color="primary"><ion-icon name="search"></ion-icon></ion-button>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label>Delanteros</ion-label>
+                  <ion-button color="primary"><ion-icon name="search"></ion-icon></ion-button>
+                </ion-item>
+
+              </ion-list>
+
+            </ion-col>
+          </ion-row>
+          
+          <ion-row>
+          <ion-col>
+              <ion-button type="submit"
+                          color="tertiary"
+                          shape="round">
+                  Crear equipo
+              </ion-button>
+          </ion-col>
+        </ion-row>
+        
+        </form>
+
+      </ion-grid>
+  
+  
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

@@ -7,11 +7,6 @@
           <ion-label [style.color]="isDesafiosSelected ? 'medium' : 'primary'">Desafiar</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="equipos" (click)="changeEquiposIcon()"> 
-          <ion-icon [style.color]="isEquiposSelected ? 'primary' : 'medium'" [src]="isEquiposSelected ? clickedEquiposIcon : equiposIcon"></ion-icon>
-          <ion-label [style.color]="isEquiposSelected ? 'primary' : 'medium'">Equipos</ion-label>
-      </ion-tab-button>
-
       <ion-tab-button tab="canchas" (click)="changeCanchasIcon()"> 
           <ion-icon [style.color]="isCanchasSelected ? 'primary' : 'medium'" [src]="isCanchasSelected ? clickedCanchasIcon : canchasIcon"></ion-icon>
           <ion-label [style.color]="isCanchasSelected ? 'primary' : 'medium'">Canchas</ion-label>
