@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'notificaciones', loadChildren: './pages/notificaciones/notificaciones.module#NotificacionesPageModule' },
   { path: 'perfil', loadChildren: './pages/perfil/perfil.module#PerfilPageModule' },
   { path: 'tabs-principal', loadChildren: './pages/tabs-principal/tabs-principal.module#TabsPrincipalPageModule' },
-  { path: 'detalle-equipo', loadChildren: './pages/detalle-equipo/detalle-equipo.module#DetalleEquipoPageModule' }
+  { path: 'detalle-equipo', loadChildren: './pages/detalle-equipo/detalle-equipo.module#DetalleEquipoPageModule' },
+  { path: 'registrarse', loadChildren: './pages/registrarse/registrarse.module#RegistrarsePageModule' }
 ];
 
 @NgModule({

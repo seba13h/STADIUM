@@ -1,25 +1,48 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Inicia Sesión</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
+<ion-content padding class="getstart">
 
   <img class="icon" src="assets/icon/ball.svg">
 
-  <ion-item>
-    <ion-label position="floating">Correo electrónico</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
+  <form class="list-form">
+      <ion-item color="transparent" class="item item-trns text-center">
+        <ion-label floating>
+          <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+         
+        </ion-label>
+        <ion-input type="email" color ="dark" placeholder="correo electronico"></ion-input>
+      </ion-item>
 
-  <ion-item>
-    <ion-label position="floating">Contraseña</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-
+      <ion-item color="transparent" class="item item-trns text-center">
+        <ion-label floating color="dark">
+          <ion-icon name="lock" item-start class="text-primary"></ion-icon>
+         
+        </ion-label>
+        <ion-input type="password" color="dark" placeholder="contraseña"></ion-input>
+      </ion-item>
+    </form>
+    <p text-right ion-text color="ligth" tappable ><strong>Olvidaste la contraseña?</strong></p>
   <br>
 
-  <ion-button expand="block" routerLink="/tabs-principal/equipos">Entrar</ion-button>
+  <ion-button expand="block" color="dark"  routerLink="/tabs-principal/equipos">Entrar</ion-button>
 
+  <p text-center ion-text color="secondary">O Inicia sesion con:</p>
+  <ion-grid text-center>
+      <ion-row>
+        <ion-col col-4>
+          <button ion-button icon-only block class="btn-facebook" (click)= signinWithFacebook() > 
+            <ion-icon name="logo-facebook"></ion-icon>
+          </button>
+        </ion-col>
+      
+        <ion-col col-4>
+
+    <button ion-button icon-only block class="btn-gplus" (click)=signinWithGoogle()>
+            <ion-icon name="logo-googleplus"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <div text-center margin-top >
+    <span ion-text color="secondary" tappable >No tienes una cuenta? <a (click)="Registrarse()"><strong>Registrate</strong></a></span>
+      </div>
+  
 </ion-content>

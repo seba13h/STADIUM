@@ -1,0 +1,98 @@
+<ion-content padding class="getstart">
+ <img class="icon" src="{{img_user}}">
+  <form class="list-form" *ngIf="contador == 1">
+    <ion-item color="transparent" class="item item-trns text-center">
+      <ion-label floating>
+        <ion-icon name="person" item-start class="text-primary"></ion-icon>
+
+      </ion-label>
+      <ion-input type="user" color="dark" placeholder="Nombre"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent" class="item item-trns text-center">
+      <ion-label floating color="dark">
+        <ion-icon name="person" item-start class="text-primary"></ion-icon>
+      </ion-label>
+      <ion-input type="text" color="dark" placeholder="Apellido"></ion-input>
+    </ion-item>
+
+    <ion-item color="transparent" class="item item-trns text-center">
+      <ion-label floating color="dark">
+        <ion-icon name="mail" item-start class="text-primary"></ion-icon>
+      </ion-label>
+      <ion-input type="text" color="dark" placeholder="Correo Electronico"></ion-input>
+    </ion-item>
+
+  </form>
+  <form class="list-form" *ngIf="contador == 2">
+
+    <ion-item color="transparent"  class="item item-trns text-center">
+      <ion-label>Genero</ion-label>
+      <ion-select placeholder="Elegir uno" color="dark" >
+        <ion-select-option value="f">Femenico</ion-select-option>
+        <ion-select-option value="m">Masculino</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item color="transparent"  class="item item-trns text-center">
+      <ion-label>Ciudad</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="i">Tarapaca</ion-select-option>
+        <ion-select-option value="ii">Antofagasta</ion-select-option>
+        <ion-select-option value="iii">Atacama Coquimbo</ion-select-option>
+        <ion-select-option value="iv">Coquimbo</ion-select-option>
+        <ion-select-option value="v">Valparaiso </ion-select-option>
+        <ion-select-option value="cap">Santiago</ion-select-option>
+        <ion-select-option value="vi">Ohiggins</ion-select-option>
+        <ion-select-option value="vii">Maule</ion-select-option>
+        <ion-select-option value="viii">Bio-bio</ion-select-option>
+        <ion-select-option value="ix">La Araucania</ion-select-option>
+        <ion-select-option value="x">Los lagos</ion-select-option>
+        <ion-select-option value="xi">Aysen</ion-select-option>
+        <ion-select-option value="xii">Magallanes</ion-select-option>
+        <ion-select-option value="xiii">Los Rios</ion-select-option>
+        <ion-select-option value="xiv">Arica y Parinacota</ion-select-option>
+        <ion-select-option value="xv">Ñuble</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item color="transparent"  class="item item-trns text-center">
+      <ion-label>MM DD YY</ion-label>
+      <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+    </ion-item>
+
+
+  </form>
+  <form class="list-form" *ngIf="contador == 3">
+
+   
+    <ion-item color="transparent"  class="item item-trns text-center">
+      <ion-label> Experiencia jugador</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="barrio">Equipo de barrio</ion-select-option>
+        <ion-select-option value="ciudad">Equipo de Ciudad</ion-select-option>
+        <ion-select-option value="profesional">Equipo profesional</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item color="transparent"  class="item item-trns text-center">
+      <ion-label>Posicion del jugador</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="delantero">Delantero</ion-select-option>
+        <ion-select-option value="defensa">Defensa</ion-select-option>
+        <ion-select-option value="medio">Medio campo</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item color="transparent"  class="item item-trns text-center">
+      <ion-label>Pie habil del jugador</ion-label>
+      <ion-select placeholder="Select One">
+        <ion-select-option value="derecha">Derecha</ion-select-option>
+        <ion-select-option value="zurda">Zurda</ion-select-option>
+        <ion-select-option value="ambas">Ambas</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+  </form>
+  <ion-button expand="block" color="dark" *ngIf="contador == 3" routerLink="/tabs-principal/equipos">Finalizar</ion-button>
+
+  <ion-button expand="block" color="dark" (click)="contador= contador + 1" *ngIf="contador != 3">Siguiente</ion-button>
+
+</ion-content>
