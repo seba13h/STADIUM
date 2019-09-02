@@ -9,8 +9,6 @@ export class TabsPrincipalPage implements OnInit {
 
   desafiosIcon = '../assets/icon/fist.svg';
   clickedDesafiosIcon = '../assets/icon/fist-full.svg';
-  equiposIcon = '../assets/icon/zapato.svg';
-  clickedEquiposIcon = '../assets/icon/zapato-full.svg';
   canchasIcon = '../assets/icon/cancha.svg';
   clickedCanchasIcon = '../assets/icon/cancha-full.svg';
   perfilIcon = '../assets/icon/futbolista.svg';
@@ -20,10 +18,9 @@ export class TabsPrincipalPage implements OnInit {
 
 
   isDesafiosSelected = false;
-  isEquiposSelected = true;
   isCanchasSelected = false;
   isNotificacionesSelected = false; 
-  isPerfilSelected = false;
+  isPerfilSelected = true;
 
   constructor() { }
 
@@ -33,11 +30,6 @@ export class TabsPrincipalPage implements OnInit {
   changeDesafiosIcon(): void {    
     this.resetAll();
     this.isDesafiosSelected = true;
-  }
-
-  changeEquiposIcon(): void {
-   this.resetAll();
-   this.isEquiposSelected = true;
   }
 
   changeCanchasIcon(): void {
@@ -56,7 +48,6 @@ export class TabsPrincipalPage implements OnInit {
 
   resetAll(){
     this.isDesafiosSelected = false;
-    this.isEquiposSelected = false;
     this.isCanchasSelected = false;
     this.isNotificacionesSelected = false;
     this.isPerfilSelected = false;

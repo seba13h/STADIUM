@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Elección de Arquero</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Cerrar</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3>Tus amigos de Facebook</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-slides [options]="slideOptJugadores">
+    <ion-slide *ngFor="let jugador of jugadores;">
+
+      <ion-card class="card-jugador" routerLink="../perfil">
+        <img style="width: 100px; height: 150px;" src="{{ 'assets/jugadores/'+ jugador}}">
+
+        <ion-card-header>
+          <ion-card-subtitle style="margin-bottom: 0px;">Messi</ion-card-subtitle>
+          <ion-card-subtitle style="margin-top: 0px;"><small><strong>Arquero</strong></small></ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3>Tus amigos de Google</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-slides [options]="slideOptJugadores">
+    <ion-slide *ngFor="let jugador of jugadores;">
+
+      <ion-card class="card-jugador" routerLink="../perfil">
+        <img style="width: 100px; height: 150px;" src="{{ 'assets/jugadores/'+ jugador}}">
+
+        <ion-card-header>
+          <ion-card-subtitle style="margin-bottom: 0px;">Messi</ion-card-subtitle>
+          <ion-card-subtitle style="margin-top: 0px;"><small><strong>Arquero</strong></small></ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+    </ion-slide>
+  </ion-slides>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h3>Cerca de ti...</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-slides [options]="slideOptJugadores">
+    <ion-slide *ngFor="let jugador of jugadores;">
+
+      <ion-card class="card-jugador" routerLink="../perfil">
+        <img style="width: 100px; height: 150px;" src="{{ 'assets/jugadores/'+ jugador}}">
+
+        <ion-card-header>
+          <ion-card-subtitle style="margin-bottom: 0px;">Messi</ion-card-subtitle>
+          <ion-card-subtitle style="margin-top: 0px;"><small><strong>Arquero</strong></small></ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

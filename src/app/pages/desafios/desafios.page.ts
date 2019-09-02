@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-desafios',
@@ -24,9 +25,22 @@ export class DesafiosPage implements OnInit {
     freeMode: true 
   };
 
-  constructor() { }
+  constructor( private loadingCtrl: LoadingController ) { }
 
   ngOnInit() {
+    this.presentLoading();
+  }
+
+  async presentLoading() {
+    const loading = await this.loadingCtrl.create({
+      message: 'Buscando oponentes en tu zona... ',
+      duration: 2000
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+
+    console.log('Loading dismissed!');
   }
 
   segmentChanged(ev: any) {
