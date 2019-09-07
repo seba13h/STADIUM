@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { ModalAjusteDistanciaPage } from '../modal-ajuste-distancia/modal-ajuste-distancia.page';
 
 @Component({
   selector: 'app-modal-arquero-sel',
@@ -30,6 +31,16 @@ export class ModalArqueroSelPage implements OnInit {
 
   dismissModal(){
     this.modalCtrl.dismiss(); 
+  }
+
+  async abrirAjusteDistancia(){
+
+    const modal = await this.modalCtrl.create({
+      component: ModalAjusteDistanciaPage
+    });
+
+    await modal.present();
+
   }
 
 }

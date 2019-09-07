@@ -16,6 +16,9 @@
       <ion-col>
         <h3>Tus amigos de Facebook</h3>
       </ion-col>
+
+      <ion-icon name="logo-facebook" style="color: #3b5998; margin-top: 15px; width: 35px; height: 35px;"></ion-icon>
+
     </ion-row>
   </ion-grid>
 
@@ -25,10 +28,13 @@
       <ion-card class="card-jugador" routerLink="../perfil">
         <img style="width: 100px; height: 150px;" src="{{ 'assets/jugadores/'+ jugador}}">
 
-        <ion-card-header>
-          <ion-card-subtitle style="margin-bottom: 0px;">Messi</ion-card-subtitle>
+        <ion-card-header style="padding-top: 5px; padding-bottom: 3px;">
+          <ion-card-subtitle style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px;">Messi</ion-card-subtitle>
           <ion-card-subtitle style="margin-top: 0px;"><small><strong>Arquero</strong></small></ion-card-subtitle>
         </ion-card-header>
+
+        <ion-button style="margin-top: 0px;" size="small" expand="block">Invitar</ion-button>
+
       </ion-card>
 
     </ion-slide>
@@ -39,6 +45,9 @@
       <ion-col>
         <h3>Tus amigos de Google</h3>
       </ion-col>
+
+      <ion-icon name="logo-google" style="color: red; margin-top: 18px; width: 35px; height: 35px;"></ion-icon>
+
     </ion-row>
   </ion-grid>
 
@@ -48,10 +57,13 @@
       <ion-card class="card-jugador" routerLink="../perfil">
         <img style="width: 100px; height: 150px;" src="{{ 'assets/jugadores/'+ jugador}}">
 
-        <ion-card-header>
-          <ion-card-subtitle style="margin-bottom: 0px;">Messi</ion-card-subtitle>
+        <ion-card-header style="padding-top: 5px; padding-bottom: 3px;">
+          <ion-card-subtitle style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px;">Messi</ion-card-subtitle>
           <ion-card-subtitle style="margin-top: 0px;"><small><strong>Arquero</strong></small></ion-card-subtitle>
         </ion-card-header>
+
+        <ion-button style="margin-top: 0px;" size="small" expand="block">Invitar</ion-button>
+
       </ion-card>
 
     </ion-slide>
@@ -62,6 +74,8 @@
       <ion-col>
         <h3>Cerca de ti...</h3>
       </ion-col>
+      
+      <ion-button style="margin-top: 10px;" (click)="abrirAjusteDistancia()"><ion-icon name="cog" style="width: 35px; height: 35px;"></ion-icon></ion-button>
     </ion-row>
   </ion-grid>
 
@@ -71,10 +85,13 @@
       <ion-card class="card-jugador" routerLink="../perfil">
         <img style="width: 100px; height: 150px;" src="{{ 'assets/jugadores/'+ jugador}}">
 
-        <ion-card-header>
-          <ion-card-subtitle style="margin-bottom: 0px;">Messi</ion-card-subtitle>
+        <ion-card-header style="padding-top: 5px; padding-bottom: 3px;">
+          <ion-card-subtitle style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px;">Messi</ion-card-subtitle>
           <ion-card-subtitle style="margin-top: 0px;"><small><strong>Arquero</strong></small></ion-card-subtitle>
         </ion-card-header>
+
+        <ion-button style="margin-top: 0px;" size="small" expand="block">Convocar</ion-button>
+
       </ion-card>
 
     </ion-slide>

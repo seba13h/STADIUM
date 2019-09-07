@@ -29,7 +29,21 @@ export class PerfilPage implements OnInit {
 
   constructor( private modalCtrl: ModalController ) { }
 
+  img_user: string;
+  nombre_user: string;
+
   ngOnInit() {
+    var dataUser = JSON.parse(localStorage.getItem('DataUser'));
+    var isLogin = JSON.parse(localStorage.getItem('Islogin'));
+    if (isLogin == "redsocialgoogle"){
+     this.img_user = dataUser.image;
+     this.nombre_user = dataUser.name;
+    }else if (isLogin == "redsocialfb"){
+      this.img_user = dataUser.picture.data.url;
+      this.nombre_user = dataUser.name;
+    }else{
+      this.img_user = "assets/jugadores/AgregarUsuario.png";
+    }
   }
 
   async abrirModal(){
