@@ -7,9 +7,9 @@
           <ion-label [style.color]="isDesafiosSelected ? 'medium' : 'primary'">Desafiar</ion-label>
       </ion-tab-button>
 
-      <ion-tab-button tab="canchas" (click)="changeCanchasIcon()"> 
-          <ion-icon [style.color]="isCanchasSelected ? 'primary' : 'medium'" [src]="isCanchasSelected ? clickedCanchasIcon : canchasIcon"></ion-icon>
-          <ion-label [style.color]="isCanchasSelected ? 'primary' : 'medium'">Canchas</ion-label>
+      <ion-tab-button tab="partidos" (click)="changePartidosIcon()"> 
+          <ion-icon [style.color]="isPartidosSelected ? 'primary' : 'medium'" [src]="isPartidosSelected ? clickedPartidosIcon : partidosIcon"></ion-icon>
+          <ion-label [style.color]="isPartidosSelected ? 'primary' : 'medium'">Partidos</ion-label>
       </ion-tab-button>
 
       <ion-tab-button tab="notificaciones" (click)="changeNotificacionesIcon()"> 

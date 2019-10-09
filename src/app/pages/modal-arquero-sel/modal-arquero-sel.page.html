@@ -25,7 +25,7 @@
   <ion-slides [options]="slideOptJugadores">
     <ion-slide *ngFor="let jugador of jugadores;">
 
-      <ion-card class="card-jugador" routerLink="../perfil">
+      <ion-card class="card-jugador" (click)="invitarJugadorAlert()"> 
         <img style="width: 100px; height: 150px;" src="{{ 'assets/jugadores/'+ jugador}}">
 
         <ion-card-header style="padding-top: 5px; padding-bottom: 3px;">
@@ -62,7 +62,7 @@
           <ion-card-subtitle style="margin-top: 0px;"><small><strong>Arquero</strong></small></ion-card-subtitle>
         </ion-card-header>
 
-        <ion-button style="margin-top: 0px;" size="small" expand="block">Invitar</ion-button>
+        <ion-button (click)="invitarJugadorAlert()" style="margin-top: 0px;" size="small" expand="block">Invitar</ion-button>
 
       </ion-card>
 
@@ -71,8 +71,12 @@
 
   <ion-grid>
     <ion-row>
+
+
+      <ion-icon style="width: 20px; height: 20px; padding-top: 24px;" src="../../assets/icon/galleta.svg"></ion-icon>
+
       <ion-col>
-        <h3>Cerca de ti...</h3>
+        <h3>Galletas cerca de ti...</h3>
       </ion-col>
       
       <ion-button style="margin-top: 10px;" (click)="abrirAjusteDistancia()"><ion-icon name="cog" style="width: 35px; height: 35px;"></ion-icon></ion-button>
@@ -86,11 +90,11 @@
         <img style="width: 100px; height: 150px;" src="{{ 'assets/jugadores/'+ jugador}}">
 
         <ion-card-header style="padding-top: 5px; padding-bottom: 3px;">
-          <ion-card-subtitle style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px;">Messi</ion-card-subtitle>
+          <ion-card-subtitle style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px;">Messi <ion-icon src="../../assets/icon/galleta.svg"></ion-icon></ion-card-subtitle>
           <ion-card-subtitle style="margin-top: 0px;"><small><strong>Arquero</strong></small></ion-card-subtitle>
         </ion-card-header>
 
-        <ion-button style="margin-top: 0px;" size="small" expand="block">Convocar</ion-button>
+        <ion-button (click)="elegirJugadorAlert()" style="margin-top: 0px;" size="small" expand="block">Elegir</ion-button>
 
       </ion-card>
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-desafios',
@@ -25,7 +26,7 @@ export class DesafiosPage implements OnInit {
     freeMode: true 
   };
 
-  constructor( private loadingCtrl: LoadingController ) { }
+  constructor( private loadingCtrl: LoadingController, private router: Router ) { }
 
   ngOnInit() {
     this.presentLoading();
@@ -45,6 +46,10 @@ export class DesafiosPage implements OnInit {
 
   segmentChanged(ev: any) {
     console.log('Segment changed', ev);
+  }
+
+  abrirDesafioEquipo() {
+    this.router.navigate(['/detalle-equipo']);
   }
 
 }

@@ -17,8 +17,8 @@ const routes: Routes = [
         loadChildren: '../desafios/desafios.module#DesafiosPageModule'
       },
       {
-        path: 'canchas',
-        loadChildren: '../canchas/canchas.module#CanchasPageModule'
+        path: 'partidos',
+        loadChildren: '../partidos/partidos.module#PartidosPageModule'
       },
       {
         path: 'notificaciones',

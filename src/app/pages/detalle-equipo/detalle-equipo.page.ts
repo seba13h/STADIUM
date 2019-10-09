@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+import { ModalFhDesafioPage } from '../modal-fh-desafio/modal-fh-desafio.page';
 
 @Component({
   selector: 'app-detalle-equipo',
@@ -23,20 +24,19 @@ export class DetalleEquipoPage implements OnInit {
     spacebetween: -3,
   };
 
-  constructor(public alertCtrl: AlertController) { }
+  constructor( private modalCtrl: ModalController ) { }
 
   ngOnInit() {
   }
 
-  async desafioAlert() {
-    const alert = await this.alertCtrl.create({
-      header: '¡Ponte a entrenar!',
-      subHeader: 'Has desafiado a Barcelona',
-      message: 'Debes esperar a que responda a la solicitud, se te notificará si aceptó o rechazó el desafío',
-      buttons: ['OK']
+  async abrirFHDesafio() {
+
+    const modal = await this.modalCtrl.create({
+      component: ModalFhDesafioPage
     });
 
-    await alert.present();
+    await modal.present();
+
   }
 
 }

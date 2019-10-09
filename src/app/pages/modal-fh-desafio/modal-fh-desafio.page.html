@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Desafiando a Barcelona</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Cerrar</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-list-header>
+      <ion-label>Buscar canchas disponible: </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+
+      <ion-label>Fecha y hora</ion-label>
+      <ion-datetime value="{{ fechaActual }}" displayFormat="D MMM YYYY H:mm"></ion-datetime>
+
+    </ion-item>
+
+    <ion-item>
+
+      <ion-label>Duración (minutos)</ion-label>
+      <ion-select>
+        <ion-select-option selected>60</ion-select-option>
+        <ion-select-option>90</ion-select-option>
+        <ion-select-option>120</ion-select-option>
+        <ion-select-option>150</ion-select-option>
+        <ion-select-option>180</ion-select-option>
+        <ion-select-option>240</ion-select-option>
+        <ion-select-option>300</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-chip color="warning">
+    <ion-label>La fecha máxima de búsqueda es sábado, 26 de Sep de 2020</ion-label>
+  </ion-chip>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+        <ion-button expand="block" color="primary" (click)="abrirCanchasDisponibles()">Buscar</ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

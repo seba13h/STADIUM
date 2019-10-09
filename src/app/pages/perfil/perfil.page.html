@@ -1,13 +1,13 @@
 <ion-header>
-    <ion-toolbar color="primary">
-  
-      <ion-buttons slot="start">
-        <ion-back-button text="Atrás"></ion-back-button>
-      </ion-buttons>
-  
-      <ion-title>Stadium</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Stadios</ion-title>
+  </ion-toolbar>
+</ion-header>
   
   <ion-content>
   
@@ -24,8 +24,10 @@
         <ion-col size="4" class="detalle-perfil">
   
           <ion-card class="imgPerfil">
-            <img style="width: 95px; height: 150px;" src="{{ img_user }}">
+            <img style="width: 100%; height: 170px;" src="{{ img_user }}">
           </ion-card>
+
+          <ion-icon style="position: absolute; bottom: 18px; padding-left: 90px; width: 35px; height: 35px;" src="../../assets/icon/galleta.svg"></ion-icon>
           
         </ion-col>
         
@@ -72,8 +74,8 @@
       <ion-row>
         <ion-col>
   
-          <ion-button expand="block" color="primary"><ion-icon src="../../assets/icon/galleta.svg"></ion-icon>  Galletear</ion-button>
-  
+          <ion-button expand="block" color="primary" (click)="abrirGalletear()"><ion-icon src="../../assets/icon/galleta.svg"></ion-icon>  Galletear</ion-button>
+
         </ion-col>
 
         <ion-col>

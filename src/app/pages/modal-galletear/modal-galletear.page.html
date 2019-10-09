@@ -1,0 +1,140 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Galletear</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Cerrar</ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list style="margin-top: 5px; margin-bottom: 0px;">
+    <ion-item class="item" lines="none">
+      <ion-icon slot="start" src="../../assets/icon/galleta.svg"></ion-icon>
+      <ion-label>Activar modo galleta</ion-label>
+      <ion-toggle color="dark" slot="end" [(ngModel)]="galleta"></ion-toggle>
+    </ion-item>
+    <br>
+  </ion-list>
+
+  <ion-chip color="warning" *ngIf="!galleta">
+    <ion-label>Al activar este modo podrás integrarte a partidos del día y estar visible para equipos que esten en busca de galletas
+    </ion-label>
+  </ion-chip>
+    
+
+  <ion-slides [options]="slideOpts" *ngIf="galleta">
+
+    <ion-slide *ngFor="let equipo of equipos;">
+
+      <ion-card>
+        <ion-grid>
+
+          <ion-row>
+
+            <ion-col>
+
+                <img style="width: 150px; height: 150px;" src="{{ 'assets/'+ equipo}}">
+
+            </ion-col>
+
+            <ion-col>
+
+                <h1 style="margin-top: 40px; font-family:monospace; font-size: 40px; color:darkred;">VS</h1>
+            </ion-col>
+
+            <ion-col>
+
+                <img style="width: 150px; height: 150px;" src="{{ 'assets/'+ equipo}}"> 
+
+            </ion-col>
+
+          </ion-row>
+
+          <ion-row>
+
+            <ion-col>
+              <ion-card-header>
+                <ion-card-subtitle style="margin-bottom: 15px;"><strong>Valparaíso</strong></ion-card-subtitle>
+                <ion-list>
+                  <ion-item>
+                    Cancha: Futbolito Fair Play, Nº 4
+                  </ion-item>
+
+                  <ion-item>
+                    Fecha del encuentro: 09/09/19
+                  </ion-item>
+
+                  <ion-item>
+                    Hora del encuentro: 18:00 hrs.
+                  </ion-item>
+
+                  <ion-item>
+                    
+                    <ion-grid>
+
+                      <ion-row>
+
+                        <ion-col>
+
+                          <ion-icon slot="start" src="../../assets/icon/galleta.svg"></ion-icon>
+                          Se Necesita: 
+
+                        </ion-col>
+                      
+                      </ion-row>
+
+                      <ion-row>
+
+                        <ion-col>
+
+                          <ion-list>
+                            <ion-item>
+                                <ion-icon src="../../assets/icon/galleta.svg"></ion-icon>
+                                Defensa
+                                <ion-button slot="end">
+                                  Unirme
+                                </ion-button>
+                            </ion-item>
+      
+                            <ion-item lines="none">
+                                <ion-icon src="../../assets/icon/galleta.svg"></ion-icon>
+                                Delantero
+                                <ion-button slot="end">
+                                  Unirme
+                                </ion-button> 
+                            </ion-item>
+                          </ion-list>
+
+                        </ion-col>
+
+                      </ion-row>
+
+                    </ion-grid>
+                    
+                  </ion-item>
+
+                  <ion-item>
+
+                      <ion-button style="margin-left: 90px;" size="default" expand="block">Más info</ion-button>
+
+                  </ion-item>
+
+                </ion-list>
+              </ion-card-header>
+            </ion-col>
+
+          </ion-row>
+
+        </ion-grid>
+        
+      </ion-card>
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>

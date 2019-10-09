@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { ModalArqueroSelPage } from '../modal-arquero-sel/modal-arquero-sel.page';
 
 @Component({
@@ -8,6 +8,9 @@ import { ModalArqueroSelPage } from '../modal-arquero-sel/modal-arquero-sel.page
   styleUrls: ['./modal-crear-equipo.page.scss'],
 })
 export class ModalCrearEquipoPage implements OnInit {
+  static dismissModal() {
+    throw new Error("Method not implemented.");
+  }
 
   avatars = [
     {
@@ -107,7 +110,7 @@ export class ModalCrearEquipoPage implements OnInit {
     }
   ];
 
-  constructor( private modalCtrl: ModalController ) { }
+  constructor( private modalCtrl: ModalController, public alertCtrl: AlertController ) { }
 
   ngOnInit() {
   }
@@ -128,6 +131,16 @@ export class ModalCrearEquipoPage implements OnInit {
 
     await modal.present();
 
+  }
+  
+  async crearEquipoAlert() {
+    const alert = await this.alertCtrl.create({
+      header: '¡Se ha creado tu equipo satisfactoriamente!',
+      message: 'Debes esperar a que los jugadores respondan a la solicitud para que sean parte de tu equipo, se te notificará si aceptaron o rechazaron la invitación',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 
 }

@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Canchas disponibles</ion-title>
+
+    <ion-buttons slot="end" style="padding-right: 5px;">
+      <ion-back-button text="Cerrar" icon="null"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col style="text-align: center; padding-bottom: 0px;">
+        <h6><b>lunes, 30 de septiembre de 2019 - 19:00</b></h6>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col style="text-align: center; padding-top: 0px;">
+        <h6>Existen otras canchas, pero se encuentran a más de 50kms. Si desea buscar más de este límite, presione el siguiente botón:</h6>
+        <ion-button size="small">Más canchas</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+          <ion-card>
+            <img src="../../../assets/canchas/1.jpg"/>
+            <ion-button expand="block">Seleccionar cancha</ion-button>
+            <ion-chip (click)="abrirInfoCancha()" color="success">
+              <ion-icon name="information-circle"></ion-icon>
+              <ion-label>Información del club</ion-label>
+              <ion-label style="padding-left: 147px;">2km</ion-label>
+            </ion-chip>
+          </ion-card> 
+
+          <ion-card>
+            <img src="../../../assets/canchas/2.jpg"/>
+            <ion-button expand="block">Seleccionar cancha</ion-button>
+            <ion-chip  color="success">
+              <ion-icon name="information-circle"></ion-icon>
+              <ion-label>Información del club</ion-label>
+              <ion-label style="padding-left: 147px;">2km</ion-label>
+            </ion-chip>
+          </ion-card>
+
+          <ion-card>
+            <img src="../../../assets/canchas/3.jpg"/>
+            <ion-button expand="block">Seleccionar cancha</ion-button>
+            <ion-chip color="success">
+              <ion-icon name="information-circle"></ion-icon>
+              <ion-label>Información del club</ion-label>
+              <ion-label style="padding-left: 147px;">2km</ion-label>
+            </ion-chip>
+          </ion-card>
+
+          <ion-card>
+            <img src="../../../assets/canchas/4.jpg"/>
+            <ion-button expand="block">Seleccionar cancha</ion-button>
+            <ion-chip color="success">
+              <ion-icon name="information-circle"></ion-icon>
+              <ion-label>Información del club</ion-label>
+              <ion-label style="padding-left: 147px;">2km</ion-label>
+            </ion-chip>
+          </ion-card>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>

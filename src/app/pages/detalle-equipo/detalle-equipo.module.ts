@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { DetalleEquipoPage } from './detalle-equipo.page';
+import { ModalFhDesafioPage } from '../modal-fh-desafio/modal-fh-desafio.page';
+import { ModalFhDesafioPageModule } from '../modal-fh-desafio/modal-fh-desafio.module';
 
 const routes: Routes = [
   {
@@ -15,11 +17,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  entryComponents: [
+    ModalFhDesafioPage
+  ],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ModalFhDesafioPageModule
   ],
   declarations: [DetalleEquipoPage]
 })

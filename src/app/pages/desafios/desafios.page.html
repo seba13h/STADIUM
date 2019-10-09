@@ -19,7 +19,7 @@
 
       <ion-slide *ngFor="let equipo of equipos;">
 
-        <ion-card routerLink="../../../detalle-equipo">
+        <ion-card (click)="abrirDesafioEquipo()">
           <img style="width: 400px; height: 450px;" src="{{ 'assets/'+ equipo}}">
 
           <ion-card-header>

@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-back-button text="Atrás"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Stadios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <section>
+    <ion-list>
+        <ion-list-header>
+          Chats partidos confirmados
+        </ion-list-header>
+
+        <ion-item *ngFor="let i of [1,1,1,1,1,1,1,1,1,1];" (click)="abrirChat()">
+
+          <ion-avatar slot="start">
+            <img src="../../assets/barcelona.png">
+          </ion-avatar>
+
+          <ion-avatar slot="start">
+            <img src="../../assets/sw.png">
+          </ion-avatar>
+
+          <ion-label>
+            <h3>Barcelona VS Santiago Wanders</h3>
+            <p><strong>Francisco: </strong>  Hola!, cómo están pal partido?</p>
+          </ion-label>
+
+        </ion-item>
+
+    </ion-list>
+  </section>
+  
+
+</ion-content>
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ModalCrearEquipoPage } from '../modal-crear-equipo/modal-crear-equipo.page';
+import { ModalGalletearPage } from '../modal-galletear/modal-galletear.page';
 
 @Component({
   selector: 'app-perfil',
@@ -11,14 +12,14 @@ export class PerfilPage implements OnInit {
 
   equipos: string[] = 
     [
-      "barcelona.png", 
-      "bayern.png", 
-      "audax.png", 
-      "colo.png", 
-      "huachipato.png", 
-      "manchester.png", 
-      "palestino.png", 
-      "sw.png"
+      'barcelona.png', 
+      'bayern.png', 
+      'audax.png', 
+      'colo.png', 
+      'huachipato.png', 
+      'manchester.png', 
+      'palestino.png', 
+      'sw.png'
     ];
 
   slideOptEquipos = {
@@ -35,18 +36,18 @@ export class PerfilPage implements OnInit {
   ngOnInit() {
     var dataUser = JSON.parse(localStorage.getItem('DataUser'));
     var isLogin = JSON.parse(localStorage.getItem('Islogin'));
-    if (isLogin == "redsocialgoogle"){
+    if (isLogin === 'redsocialgoogle') {
      this.img_user = dataUser.image;
      this.nombre_user = dataUser.name;
-    }else if (isLogin == "redsocialfb"){
+    } else if (isLogin === 'redsocialfb'){
       this.img_user = dataUser.picture.data.url;
       this.nombre_user = dataUser.name;
-    }else{
-      this.img_user = "assets/jugadores/AgregarUsuario.png";
+    } else {
+      this.img_user = 'assets/jugadores/AgregarUsuario.png';
     }
   }
 
-  async abrirModal(){
+  async abrirModal() {
 
     const modal = await this.modalCtrl.create({
       component: ModalCrearEquipoPage
@@ -56,4 +57,14 @@ export class PerfilPage implements OnInit {
 
   }
 
+  async abrirGalletear() {
+
+    const modal = await this.modalCtrl.create({
+      component: ModalGalletearPage
+    });
+
+    await modal.present();
+
+  }
+  
 }

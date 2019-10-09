@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Información del Club</ion-title>
+
+    <ion-buttons slot="end" style="padding-right: 5px;">
+      <ion-back-button text="Cerrar" icon="null"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item-group>
+      
+      <ion-item-divider>
+        <ion-label><strong>Nombre</strong></ion-label>
+      </ion-item-divider>
+
+      <ion-item lines="none">
+        <ion-label>ESBO</ion-label>
+      </ion-item>
+
+            
+      <ion-item-divider>
+        <ion-label><strong>Ubicación</strong></ion-label>
+      </ion-item-divider>
+
+      <ion-item lines="none">
+        <p>
+
+          <a>
+            <ion-icon name="pin"></ion-icon>
+            Caletera Oriente KM 20,04 Ruta CH60 Camino Quillota - San Pedro
+          </a>
+
+        </p>
+        
+      </ion-item>
+
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-group>
+      
+      <ion-item-divider>
+        <ion-label><strong>Imágenes</strong></ion-label>
+      </ion-item-divider>
+
+      <ion-slides [options]="slideOptClubs">
+        <ion-slide *ngFor="let club of clubs;">
+
+          <ion-card class="card-jugador">
+            <img style="width: 300px; height: 150px;" src="{{ 'assets/clubs/'+ club}}">
+          </ion-card>
+
+        </ion-slide>
+      </ion-slides>
+
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-group>
+      
+      <ion-item-divider>
+        <ion-label><strong>Prestaciones</strong></ion-label>
+      </ion-item-divider>
+
+      <ion-item>
+        <ion-label>Estacionamiento</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Cafetería</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Camarínes</ion-label>
+      </ion-item>
+
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-group>
+      
+      <ion-item-divider>
+        <ion-label><strong>Horarios</strong></ion-label>
+      </ion-item-divider>
+
+      <ion-item lines="none">
+        <ion-label>Lunes a Domingo de 9:00 a 23:00</ion-label>
+      </ion-item>
+
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-group>
+      
+      <ion-item-divider>
+        <ion-label><strong>Condiciones de reserva y pago</strong></ion-label>
+      </ion-item-divider>
+
+      <ion-item lines="none">
+        <p>Puedes reservar en stadios.cl y luego pagar en el recinto.</p>
+      </ion-item>
+
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-group>
+      
+      <ion-item-divider>
+        <ion-label><strong>Información de canchas</strong></ion-label>
+      </ion-item-divider>
+
+      <ion-item>
+        <ion-label>4 canchas futbolito pasto sintético.</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>2 canchas baby fútbol pasto sintético</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>1 cancha de fútbol pasto sintético</ion-label>
+      </ion-item>
+
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-item-group>
+      
+      <ion-item-divider>
+        <ion-label><strong>Contacto</strong></ion-label>
+      </ion-item-divider>
+
+      <ion-item>
+        <ion-label><a href="http://www.esbo.cl/">http://www.esbo.cl/</a></ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label><a>+56332491204</a></ion-label>
+      </ion-item>
+
+    </ion-item-group>
+  </ion-list>
+
+</ion-content>

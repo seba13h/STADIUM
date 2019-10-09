@@ -8,6 +8,8 @@ import { IonicModule } from '@ionic/angular';
 import { PerfilPage } from './perfil.page';
 import { ModalCrearEquipoPage } from '../modal-crear-equipo/modal-crear-equipo.page';
 import { ModalCrearEquipoPageModule } from '../modal-crear-equipo/modal-crear-equipo.module';
+import { ModalGalletearPage } from '../modal-galletear/modal-galletear.page';
+import { ModalGalletearPageModule } from '../modal-galletear/modal-galletear.module';
 
 const routes: Routes = [
   {
@@ -18,14 +20,16 @@ const routes: Routes = [
 
 @NgModule({
   entryComponents: [
-    ModalCrearEquipoPage
+    ModalCrearEquipoPage,
+    ModalGalletearPage
   ],
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    ModalCrearEquipoPageModule
+    ModalCrearEquipoPageModule,
+    ModalGalletearPageModule
   ],
   declarations: [PerfilPage]
 })

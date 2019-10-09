@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, AlertController } from '@ionic/angular';
 import { ModalAjusteDistanciaPage } from '../modal-ajuste-distancia/modal-ajuste-distancia.page';
+import { ModalCrearEquipoPage } from '../modal-crear-equipo/modal-crear-equipo.page';
 
 @Component({
   selector: 'app-modal-arquero-sel',
@@ -24,7 +25,7 @@ export class ModalArqueroSelPage implements OnInit {
     spacebetween: -3,
   };
 
-  constructor( private modalCtrl: ModalController ) { }
+  constructor( private modalCtrl: ModalController, public alertCtrl: AlertController ) { }
 
   ngOnInit() {
   }
@@ -41,6 +42,32 @@ export class ModalArqueroSelPage implements OnInit {
 
     await modal.present();
 
+  }
+
+  redireccion(){
+    this.dismissModal();
+    this.dismissModal();
+    return 'tabs-principal/perfil';
+  }
+
+  async invitarJugadorAlert() {
+    const alert = await this.alertCtrl.create({
+      header: '¡Invitación enviada satisfactoriamente!',
+      message: 'Debes esperar a que el jugador instale la aplicación y responda a la solicitud para que sea parte de tu equipo, se te notificará si aceptó o rechazó la invitación',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+
+  async elegirJugadorAlert() {
+    const alert = await this.alertCtrl.create({
+      header: '¡Invitación enviada satisfactoriamente!',
+      message: 'Debes esperar a que el jugador responda a la solicitud para que sea parte de tu equipo, se te notificará si aceptó o rechazó la invitación',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 
 }

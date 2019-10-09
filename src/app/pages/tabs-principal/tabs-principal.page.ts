@@ -9,8 +9,8 @@ export class TabsPrincipalPage implements OnInit {
 
   desafiosIcon = '../assets/icon/fist.svg';
   clickedDesafiosIcon = '../assets/icon/fist-full.svg';
-  canchasIcon = '../assets/icon/cancha.svg';
-  clickedCanchasIcon = '../assets/icon/cancha-full.svg';
+  partidosIcon = '../assets/icon/cancha.svg';
+  clickedPartidosIcon = '../assets/icon/cancha-full.svg';
   perfilIcon = '../assets/icon/futbolista.svg';
   clickedPerfilIcon = '../assets/icon/futbolista-full.svg';
   notificacionesIcon = '../assets/icon/notificaciones.svg';
@@ -18,7 +18,7 @@ export class TabsPrincipalPage implements OnInit {
 
 
   isDesafiosSelected = false;
-  isCanchasSelected = false;
+  isPartidosSelected = false;
   isNotificacionesSelected = false; 
   isPerfilSelected = true;
 
@@ -32,9 +32,9 @@ export class TabsPrincipalPage implements OnInit {
     this.isDesafiosSelected = true;
   }
 
-  changeCanchasIcon(): void {
+  changePartidosIcon(): void {
     this.resetAll();
-    this.isCanchasSelected = true;
+    this.isPartidosSelected = true;
   }
   changeNotificacionesIcon(): void {
     this.resetAll();
@@ -48,7 +48,7 @@ export class TabsPrincipalPage implements OnInit {
 
   resetAll(){
     this.isDesafiosSelected = false;
-    this.isCanchasSelected = false;
+    this.isPartidosSelected = false;
     this.isNotificacionesSelected = false;
     this.isPerfilSelected = false;
   }
