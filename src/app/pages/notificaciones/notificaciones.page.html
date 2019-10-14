@@ -12,18 +12,30 @@
       Notificaciones
     </ion-list-header>
 
+    <ion-item>
+  
+      <ion-avatar slot="start">
+        <img src="assets/bayern.png">
+      </ion-avatar>
+
+
+      <p style="font-size: 15px;"><strong>Bayern</strong> aceptó tu desafío contra tu equipo <strong>Barcelona</strong></p>
+
+
+ 
+      <ion-button (click)="abrirReservarCancha()" style="margin-right: 0px;" color="primary" slot="end" size="small">Reserva la cancha</ion-button>
+
+    </ion-item>
+
     <ion-item *ngFor="let i of [1,1,1,1,1,1,1,1,1,1,1,1,1];">
   
       <ion-avatar slot="start">
         <img src="assets/manchester.png">
       </ion-avatar>
 
-      <ion-label>
-        <h4><strong>Manchester</strong> está desafiando a</h4>
-        <p style="color: black;"> tu equipo <strong>Barcelona</strong></p>
-         
-      </ion-label>
-
+      <p style="font-size: 15px;"><strong>Manchester</strong> está desafiando a
+      tu equipo <strong>Barcelona</strong></p>
+      
       <ion-button style="margin-right: 0px;" color="primary" slot="end" size="small">Aceptar</ion-button>
       <ion-button style="margin-left: 0px; margin-right: 2px;" color="danger" slot="end" size="small">Rechazar</ion-button>
 

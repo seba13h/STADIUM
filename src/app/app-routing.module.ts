@@ -13,7 +13,10 @@ const routes: Routes = [
   { path: 'registrarse', loadChildren: './pages/registrarse/registrarse.module#RegistrarsePageModule' },
   { path: 'partidos-chat', loadChildren: './pages/partidos-chat/partidos-chat.module#PartidosChatPageModule' },
   { path: 'busqueda-cancha', loadChildren: './pages/busqueda-cancha/busqueda-cancha.module#BusquedaCanchaPageModule' },
-  { path: 'info-clubs', loadChildren: './pages/info-clubs/info-clubs.module#InfoClubsPageModule' }
+  { path: 'info-clubs', loadChildren: './pages/info-clubs/info-clubs.module#InfoClubsPageModule' },
+  { path: 'ver-canchas', loadChildren: './pages/ver-canchas/ver-canchas.module#VerCanchasPageModule' },
+  { path: 'seleccionar-cancha', loadChildren: './pages/seleccionar-cancha/seleccionar-cancha.module#SeleccionarCanchaPageModule' },
+  { path: 'reservar-cancha', loadChildren: './pages/reservar-cancha/reservar-cancha.module#ReservarCanchaPageModule' }
 ];
 
 @NgModule({

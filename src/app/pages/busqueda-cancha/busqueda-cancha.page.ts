@@ -18,4 +18,7 @@ export class BusquedaCanchaPage implements OnInit {
     this.router.navigate(['/info-clubs']);
   }
 
+  abrirVerCanchas() {
+    this.router.navigate(['/ver-canchas']);
+  }
 }
